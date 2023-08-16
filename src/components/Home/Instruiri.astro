@@ -1,0 +1,49 @@
+---
+import SectionHeader from '../Blocks/SectionHeader.astro';
+import Grid from '../Blocks/Grid.astro';
+
+const items = [
+    {
+        title: 'Instruire',
+        image: '/assets/images/news1.png',
+    },
+    {
+        title: 'Instruire',
+        image: '/assets/images/news2.png',
+    },
+    {
+        title: 'Instruire',
+        image: '/assets/images/news1.png',
+    },
+    {
+        title: 'Instruire',
+        image: '/assets/images/news2.png',
+    },
+    {
+        title: 'Instruire',
+        image: '/assets/images/news1.png',
+    },
+    {
+        title: 'Instruire',
+        image: '/assets/images/news2.png',
+    },
+    {
+        title: 'Instruire',
+        image: '/assets/images/news1.png',
+    },
+    {
+        title: 'Instruire',
+        image: '/assets/images/news2.png',
+    },
+];
+---
+
+<div class="instruiri">
+    <div class="instruiri__container">
+        <SectionHeader title="Instruiri" className="instruiri__header" haveButton={true} />
+
+        <div class="instruiri__body">
+            <Grid classNames="instruiri__grid grid grid-4" items={items} />
+        </div>
+    </div>
+</div>

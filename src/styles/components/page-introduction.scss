@@ -1,0 +1,6 @@
+.page-introduction {
+    @include adaptiv-value('padding', 100, 60, 1);
+    text-align: center;
+    color: #fff;
+    margin-bottom: 50px;
+}

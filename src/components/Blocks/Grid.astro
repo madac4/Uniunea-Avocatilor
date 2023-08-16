@@ -1,0 +1,19 @@
+---
+const { classNames, items } = Astro.props;
+---
+
+<div class=`${classNames}`>
+    {
+        items.map((item) => (
+            <div
+                class={`grid__item grid-item-${item.size ? item.size : 'full'} grid-item`}
+                style={`background:linear-gradient(360deg, #000 0%, rgba(0, 0, 0, 0.00) 100%) , url('${item.image}') 50% 50% / cover no-repeat;`}>
+                <div class="grid-item__body">
+                    <a href="#">{item.title}</a>
+
+                    {item.date && <time>{item.date}</time>}
+                </div>
+            </div>
+        ))
+    }
+</div>

@@ -1,0 +1,18 @@
+---
+const { background, description, title } = Astro.props;
+---
+
+<div
+    class="slider-hero__slide"
+    style=`background:linear-gradient( rgba(0, 78, 110, 0.50) 100%, rgba(0, 78, 110, 0.50)100%), url('${background}') 50% 50% / cover no-repeat;`
+>
+    <div class="slider-hero__container">
+        <div class="slide-body">
+            <h1>{title}</h1>
+            <p>
+                {description}
+            </p>
+            <a href="#" class="button button__primary"> Citeste mai mult ...</a>
+        </div>
+    </div>
+</div>

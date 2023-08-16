@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Home/Hero.astro';
+import News from '../components/Home/News.astro';
+import Avocati from '../components/Home/Avocati.astro';
+import Instruiri from '../components/Home/Instruiri.astro';
+
+const slides = [
+    {
+        background: '/assets/images/slide1.png',
+        title: 'Împreună pentru o justiţie echitabilă',
+        description:
+            'De la consultanță la pledoarie, suntem alături de tine în căutarea dreptății Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate dapibus.',
+    },
+    {
+        background: '/assets/images/slide2.png',
+        title: 'Împreună pentru o justiţie echitabilă',
+        description:
+            'De la consultanță la pledoarie, suntem alături de tine în căutarea dreptății Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate dapibus.',
+    },
+    {
+        background: '/assets/images/slide3.png',
+        title: 'Împreună pentru o justiţie echitabilă',
+        description:
+            'De la consultanță la pledoarie, suntem alături de tine în căutarea dreptății Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate dapibus.',
+    },
+    {
+        background: '/assets/images/slide4.png',
+        title: 'Împreună pentru o justiţie echitabilă',
+        description:
+            'De la consultanță la pledoarie, suntem alături de tine în căutarea dreptății Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate dapibus.',
+    },
+    {
+        background: '/assets/images/slide5.png',
+        title: 'Împreună pentru o justiţie echitabilă',
+        description:
+            'De la consultanță la pledoarie, suntem alături de tine în căutarea dreptății Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate dapibus.',
+    },
+    {
+        background: '/assets/images/slide6.png',
+        title: 'Împreună pentru o justiţie echitabilă',
+        description:
+            'De la consultanță la pledoarie, suntem alături de tine în căutarea dreptății Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate dapibus.',
+    },
+];
+---
+
+<Layout>
+    <Hero slides={slides} />
+    <News />
+    <Avocati />
+    <Instruiri />
+</Layout>

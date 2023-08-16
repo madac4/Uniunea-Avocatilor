@@ -1,0 +1,15 @@
+---
+const { title, className, haveButton } = Astro.props;
+---
+
+<div class={className}>
+    <h2>{title}</h2>
+
+    {
+        haveButton && (
+            <a href="#" class="button button__primary">
+                Vezi toate
+            </a>
+        )
+    }
+</div>

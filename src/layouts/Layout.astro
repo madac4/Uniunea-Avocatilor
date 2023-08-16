@@ -1,0 +1,38 @@
+---
+import Header from '../components/General/Header.astro';
+import Footer from '../components/General/Footer.astro';
+import Introduction from '../components/General/Introduction.astro';
+// import { title, description, sourceUrl } from '../helpers/graphql';
+import '../styles/style.scss';
+
+const { pathname } = Astro.url;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <!-- <link rel="icon" type="image/svg+xml" href={sourceUrl} /> -->
+        <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+        />
+        <title>Uniunea Avocatilor - Împreună pentru o justiţie echitabilă</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <Header />
+            {pathname !== '/' ? <Introduction /> : ''}
+            <main>
+                <slot />
+            </main>
+            <Footer />
+        </div>
+    </body>
+
+    <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="../helpers/default.js"></script>
+    <script src="/src/helpers/sliders.js" defer></script>
+</html>

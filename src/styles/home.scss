@@ -1,0 +1,81 @@
+.hero {
+    @include adaptiv-value('height', 600, 440, 1);
+    .page__hero-slider {
+        .hero-slider__body {
+            .hero-slider__slider {
+                position: relative;
+                .slider-hero__body {
+                    .slider-hero__slide {
+                        @include adaptiv-value('height', 600, 440, 1);
+                        display: flex;
+                        align-items: center;
+                        color: #fff;
+                        position: relative;
+                        [class*='__container'] {
+                            width: 100%;
+                        }
+                        .slide-body {
+                            max-width: 980px;
+                            h1,
+                            p {
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                }
+                .slider-hero-controls {
+                    &__dots {
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        bottom: 40px;
+                        z-index: 2;
+                        .swiper-pagination-bullet {
+                            width: 10px;
+                            height: 10px;
+                            opacity: 1;
+                            background-color: transparent;
+                            border: 1px solid #fff;
+                            transition: 0.3s;
+                            &-active {
+                                width: 14px;
+                                height: 14px;
+                                background-color: $gaycolor;
+                                border-color: $gaycolor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.news {
+    @include adaptiv-value('padding-top', 80, 60, 1);
+    @include adaptiv-value('padding-bottom', 80, 60, 1);
+}
+
+.avocati {
+    @include adaptiv-value('padding-top', 80, 60, 1);
+    @include adaptiv-value('padding-bottom', 80, 60, 1);
+    background-color: #f0f0f3;
+}
+
+.instruiri {
+    @include adaptiv-value('padding-top', 80, 60, 1);
+    @include adaptiv-value('padding-bottom', 80, 60, 1);
+}
+
+.sidebar {
+    width: 100%;
+    height: 300px;
+    background-color: red;
+}
+
+.page-content__content {
+    width: 100%;
+    height: 800px;
+    background-color: blue;
+}

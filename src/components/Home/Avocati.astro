@@ -1,0 +1,25 @@
+---
+import SectionHeader from '../Blocks/SectionHeader.astro';
+import Grid from '../Blocks/Grid.astro';
+
+const items = [
+    {
+        title: 'Lista avocaţilor',
+        image: '/assets/images/news1.png',
+    },
+    {
+        title: 'Președintele UARM a participat la ședința finală a Comitetului Director al Proiectului.',
+        image: '/assets/images/news2.png',
+    },
+];
+---
+
+<div class="avocati">
+    <div class="avocati__container">
+        <SectionHeader title="Avocati" className="avocati__header" haveButton={false} />
+
+        <div class="avocati__body">
+            <Grid classNames="avocati__grid grid grid-2" items={items} />
+        </div>
+    </div>
+</div>

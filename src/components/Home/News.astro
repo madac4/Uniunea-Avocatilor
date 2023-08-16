@@ -1,0 +1,41 @@
+---
+import SectionHeader from '../Blocks/SectionHeader.astro';
+import Grid from '../Blocks/Grid.astro';
+
+const latestNews = [
+    {
+        title: 'Președintele UARM a participat la ședința finală a Comitetului Director al Proiectului.',
+        date: '20.06.2022',
+        image: '/assets/images/news1.png',
+        size: '3x2',
+    },
+    {
+        title: 'Președintele UARM a participat la ședința finală a Comitetului Director al Proiectului.',
+        date: '20.06.2022',
+        image: '/assets/images/news2.png',
+        size: '2x1',
+    },
+    {
+        title: 'Președintele UARM a participat la ședința finală a Comitetului Director al Proiectului.',
+        date: '20.06.2022',
+        image: '/assets/images/news1.png',
+        size: '1x1',
+    },
+    {
+        title: 'Președintele UARM a participat la ședința finală a Comitetului Director al Proiectului.',
+        date: '20.06.2022',
+        image: '/assets/images/news2.png',
+        size: '1x1',
+    },
+];
+---
+
+<div class="news">
+    <div class="news__container">
+        <SectionHeader title="Ultimile noutați" className="news__header" haveButton={true} />
+
+        <div class="news__body">
+            <Grid classNames="news__grid grid grid-mansory" items={latestNews} />
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+.page-content {
+    @include adaptiv-value('padding-bottom', 80, 60, 1);
+}
+
+.page-grid {
+    grid-template-columns: 420px 1fr;
+}

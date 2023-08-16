@@ -1,0 +1,58 @@
+.footer {
+    border-top: $border;
+    &-main {
+        @include adaptiv-value('padding-top', 50, 30, 1);
+        @include adaptiv-value('padding-bottom', 50, 30, 1);
+        @include adaptiv-value('padding-left', 50, 15, 1);
+        @include adaptiv-value('padding-right', 50, 15, 1);
+        background-color: $primarycolor;
+        display: grid;
+        gap: 40px 15px;
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+        color: #fff;
+        a {
+            color: #fff;
+            text-decoration: underline;
+        }
+        &__column {
+            h5 {
+                margin-bottom: 20px;
+            }
+            ul {
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+        }
+    }
+    &-disclaimer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px 10px;
+        padding: 30px 0;
+        @include adaptiv-value('padding-left', 50, 15, 1);
+        @include adaptiv-value('padding-right', 50, 15, 1);
+        &__left {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            img {
+                max-width: 120px;
+                height: auto;
+            }
+        }
+        &__right {
+            max-width: 780px;
+        }
+    }
+    &-copyright {
+        padding: 20px 0;
+        background-color: #f8f9fb;
+        text-align: center;
+    }
+}

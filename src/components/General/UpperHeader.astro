@@ -1,0 +1,55 @@
+---
+import { socialMedia } from '../../helpers/graphql';
+---
+
+<div class="header__upper header-upper">
+    <div class="header__container">
+        <!-- <div class=`header-upper__languages header-upper__block ${socialMedia && 'border'}`>
+            <a href="#">
+                <img src="/assets/images/romania.svg" alt="" />
+            </a>
+            <a href="#">
+                <img src="/assets/images/us.svg" alt="" />
+            </a>
+        </div> -->
+        <div class=`header-upper__languages header-upper__block border`>
+            <a href="#">
+                <img src="/assets/images/romania.svg" alt="" />
+            </a>
+            <a href="#">
+                <img src="/assets/images/us.svg" alt="" />
+            </a>
+        </div>
+
+        <!-- {
+            socialMedia && (
+                <div class="header-upper__socials header-upper__block">
+                    {socialMedia.map((item) => {
+                        return (
+                            <a href={item.socialUrl}>
+                                <img
+                                    src={item.socialIcon.sourceUrl}
+                                    alt={item.socialIcon.altText}
+                                />
+                            </a>
+                        );
+                    })}
+                </div>
+            )
+        } -->
+        <div class="header-upper__socials header-upper__block">
+            <a href="/">
+                <img src="/assets/images/facebook.svg" alt="facebook" />
+            </a>
+            <a href="/">
+                <img src="/assets/images/youtube.svg" alt="youtube" />
+            </a>
+            <a href="/">
+                <img src="/assets/images/twitter.svg" alt="twitter" />
+            </a>
+            <a href="/">
+                <img src="/assets/images/linkedin.svg" alt="linkedin" />
+            </a>
+        </div>
+    </div>
+</div>

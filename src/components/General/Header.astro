@@ -1,0 +1,48 @@
+---
+import UpperHeader from './UpperHeader.astro';
+import { sourceUrl } from '../../helpers/graphql';
+---
+
+<header class="header">
+    <UpperHeader />
+    <div class="header__container">
+        <div class="header__logo">
+            <a href="/">
+                <!-- <img src={sourceUrl} alt="logo" /> -->
+                <img src="/assets/images/logo.png" alt="logo" />
+            </a>
+        </div>
+
+        <nav class="header__nav header-nav">
+            <ul class="header-nav__list">
+                <li><a href="#">Avocaţii</a></li>
+                <li><a href="#">Noutăţi</a></li>
+                <li><a href="#">Actele uniunii</a></li>
+                <li><a href="#">Instruirea avocaţilor</a></li>
+            </ul>
+        </nav>
+
+        <div class="header__controls header-controls">
+            <form class="header-controls__search search" data-screen="480" data-this="true">
+                <input type="text" placeholder="Cauta" />
+                <button type="submit"><i class="mdi mdi-magnify"></i></button>
+            </form>
+
+            <a href="#" class="button button__icon" data-screen="1180">
+                <i class="mdi mdi-login"></i>
+                <span> Cabinetul Personal</span>
+            </a>
+
+            <div class="burger-filled">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <form class="header-controls__search search-mobile search">
+        <input type="text" placeholder="Cauta" />
+        <button type="submit"><i class="mdi mdi-magnify"></i></button>
+    </form>
+</header>

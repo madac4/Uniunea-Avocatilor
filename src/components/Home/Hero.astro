@@ -1,0 +1,25 @@
+---
+import Slide from './HeroSlide.astro';
+
+const { slides } = Astro.props;
+---
+
+<div class="hero">
+    <div class="page__hero-slider hero-slider">
+        <div class="hero-slider__body">
+            <div class="hero-slider__slider">
+                <div class="slider-hero__body swiper">
+                    {slides && slides.map((slide) => <Slide {...slide} />)}
+                </div>
+
+                <div class="slider-hero-controls">
+                    <div class="slider-hero-controls__dots"></div>
+                    <div class="slider-hero-controls__arrows slider-arrows">
+                        <button type="button" class="slider-arrow slider-arrow__prev"></button>
+                        <button type="button" class="slider-arrow slider-arrow__next"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
