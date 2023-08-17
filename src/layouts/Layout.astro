@@ -6,6 +6,7 @@ import Introduction from '../components/General/Introduction.astro';
 import '../styles/style.scss';
 
 const { pathname } = Astro.url;
+const { title, background } = Astro.props;
 ---
 
 <html lang="en">
@@ -24,7 +25,7 @@ const { pathname } = Astro.url;
     <body>
         <div class="wrapper">
             <Header />
-            {pathname !== '/' ? <Introduction /> : ''}
+            {pathname !== '/' ? <Introduction title={title} background={background} /> : ''}
             <main>
                 <slot />
             </main>
@@ -35,4 +36,5 @@ const { pathname } = Astro.url;
     <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="../helpers/default.js"></script>
     <script src="/src/helpers/sliders.js" defer></script>
+    <script src="/src/helpers/index.js" defer></script>
 </html>

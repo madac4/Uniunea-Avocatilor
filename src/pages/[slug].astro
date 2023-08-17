@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Sidebar from '../components/General/Sidebar.astro';
+import Breadcrumbs from '../components/Blocks/Breadcrumbs.astro';
+
+export async function getStaticPaths() {
+    const allPages = await Astro.glob('../contents/*.md');
+
+    return allPages.map((page) => ({
+        params: { slug: page.frontmatter.slug },
+        props: { page },
+    }));
+}
+
+const { page } = Astro.props;
+const { Content } = Astro.props.page;
+---
+
+<Layout title={page.frontmatter.title} background={page.frontmatter.image}>
+    <div class="page-content">
+        <div class="page-content__container">
+            <div class="page-content__body grid page-grid">
+                <Sidebar />
+
+                <div class="page-content__content">
+                    <Breadcrumbs title={page.frontmatter.title} />
+
+                    <h2>{page.frontmatter.title}</h2>
+
+                    <p><Content /></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>

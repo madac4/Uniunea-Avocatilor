@@ -1,15 +1,124 @@
+---
+const menuItems = [
+    {
+        title: 'Prezentare',
+        url: '/prezentare',
+        withChilds: [],
+    },
+    {
+        title: 'Cadrul Legal',
+        url: '/cadrul-legal',
+        withChilds: [],
+    },
+    {
+        title: 'Organe de Conducere',
+        withChilds: [
+            {
+                title: 'Adunarea Generală',
+                url: '/adunarea-generala',
+            },
+            {
+                title: 'Consiliul Uniunii',
+                url: '/consiliul-uniunii',
+            },
+            {
+                title: 'Preşedintele Uniunii',
+                url: '/presedintele-uniunii',
+            },
+            {
+                title: 'Comisia de Licenţie',
+                url: '/comisia-de-licentie',
+            },
+            {
+                title: 'Comisia pentru Etică şi Disciplină',
+                url: '/comisia-pentru-etica-si-disciplina',
+            },
+            {
+                title: 'Comisia de Cenzori',
+                url: '/comisia-de-cenzori',
+            },
+        ],
+    },
+    {
+        title: 'Secretarul General',
+        url: '/secretarul-general',
+        withChilds: [],
+    },
+    {
+        title: 'Barourile Teritoriale',
+        url: '/barourile-teritoriale',
+        withChilds: [],
+    },
+    {
+        title: 'Asociaţiile Avocaţilor',
+        withChilds: [
+            {
+                title: 'Test Submenu 1',
+                url: '/test-submenu-1',
+            },
+        ],
+    },
+    {
+        title: 'Rapoarte de Activitate',
+        withChilds: [
+            {
+                title: 'Test Submenu 1',
+                url: '/test-submenu-1',
+            },
+            {
+                title: 'Test Submenu 2',
+                url: '/test-submenu-2',
+            },
+        ],
+    },
+    {
+        title: 'Taxele Uniunii Avocaţilor',
+        url: '/taxele-uniunii-avocatilor',
+        withChilds: [],
+    },
+    {
+        title: 'Contactează-ne',
+        url: '/contacteazane',
+        withChilds: [],
+    },
+];
+
+const { pathname } = Astro.url;
+---
+
 <aside class="menu-sidebar sidebar">
     <nav class="sidebar__nav sidebar-nav">
         <ul class="sidebar-nav__list">
-            <li><a href="#">Prezentare</a></li>
-            <li><a href="#">Organe de Conducere</a></li>
-            <li><a href="#">Secretarul General</a></li>
-            <li><a href="#">Barourile Teritoriale</a></li>
-            <li><a href="#">Asociaţiile Avocaţilor</a></li>
-            <li><a href="#">Rapoarte de Activitate</a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+            {
+                menuItems.map((item) => {
+                    {
+                        return item.withChilds.length > 0 ? (
+                            <li
+                                class={
+                                    pathname === item.url ? 'with-submenu active' : 'with-submenu'
+                                }>
+                                <a href="javascript:void(0)">
+                                    {item.title} <i class="mdi mdi-chevron-down" />
+                                </a>
+
+                                <ul class="submenu">
+                                    {item.withChilds.map((subItem) => {
+                                        return (
+                                            <li>
+                                                <a href={subItem.url}>{subItem.title}</a>
+                                            </li>
+                                        );
+                                    })}
+                                </ul>
+                            </li>
+                        ) : (
+                            <li class={pathname === item.url ? ' active' : ''}>
+                                <a href={item.url}>{item.title}</a>
+                            </li>
+                        );
+                    }
+                })
+            }
         </ul>
     </nav>
 </aside>

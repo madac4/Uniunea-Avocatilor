@@ -381,3 +381,55 @@ form.search {
         color: $maincolor;
     }
 }
+.menu-sidebar {
+    border-top: 3px solid $gaycolor;
+    box-shadow: 0px 9px 26px -7px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    .sidebar-nav {
+        &__list {
+            li {
+                &:not(:last-child) {
+                    border-bottom: $border;
+                }
+                &.active {
+                    a {
+                        border-left: 3px solid $gaycolor;
+                    }
+                }
+                a {
+                    padding: 16px;
+                    transition: 0.3s;
+                    border-left: 3px solid transparent;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 10px;
+                    i.mdi {
+                        font-size: 20px;
+                    }
+                    &:hover {
+                        border-left: 3px solid $gaycolor;
+                    }
+                }
+                .submenu {
+                    border-top: $border;
+                    background-color: #f8f8f8;
+                    transition: 0.4s;
+                    max-height: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    &.active {
+                        a {
+                            border-left: 3px solid $gaycolor;
+                        }
+                    }
+                    li {
+                        a {
+                            padding-left: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,8 +1,12 @@
+---
+const { title, background } = Astro.props;
+---
+
 <div
     class="page-introduction"
-    style="background:linear-gradient( rgba(0, 78, 110, 0.50) 100%, rgba(0, 78, 110, 0.50)100%), url('/assets/images/introduction.jpg') 50% 50% / cover no-repeat, #6DB3F2;"
+    style=`background:linear-gradient( rgba(0, 78, 110, 0.50) 100%, rgba(0, 78, 110, 0.50)100%), url('${background}') 50% 50% / cover no-repeat, #6DB3F2;`
 >
     <div class="page-introduction__container">
-        <h1>Prezentare</h1>
+        <h1>{title}</h1>
     </div>
 </div>

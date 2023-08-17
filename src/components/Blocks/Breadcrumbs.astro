@@ -1,0 +1,17 @@
+---
+const { title } = Astro.props;
+---
+
+<div class="breadcrumbs__container">
+    <span>
+        <span>
+            <a href="/">Prima pagină</a>
+            <i class="mdi mdi-chevron-right"></i>
+            <span>
+                <span class="breadcrumb_last" aria-current="page">
+                    {title}
+                </span>
+            </span>
+        </span>
+    </span>
+</div>
