@@ -1,0 +1,55 @@
+---
+import TeamItem from '../Elements/TeamItem.astro';
+const team = [
+    {
+        name: 'Mihai Cristian',
+        position: 'Secretar',
+        image: '/assets/images/news2.png',
+    },
+    {
+        name: 'Mihai Cristian',
+        position: 'Secretar',
+        image: '/assets/images/news2.png',
+    },
+    {
+        name: 'Mihai Cristian',
+        position: 'Secretar',
+        image: '/assets/images/news2.png',
+    },
+    {
+        name: 'Mihai Cristian',
+        position: 'Secretar',
+        image: '/assets/images/news2.png',
+    },
+    {
+        name: 'Mihai Cristian',
+        position: 'Secretar',
+        image: '/assets/images/news2.png',
+    },
+    {
+        name: 'Mihai Cristian',
+        position: 'Secretar',
+        image: '/assets/images/news2.png',
+    },
+    {
+        name: 'Mihai Cristian',
+        position: 'Secretar',
+        image: '/assets/images/news2.png',
+    },
+    {
+        name: 'Mihai Cristian',
+        position: 'Secretar',
+        image: '/assets/images/news2.png',
+    },
+];
+---
+
+<div class="team">
+    <div class="team__body grid grid-4 gap-2 team-body">
+        {
+            team.map((item) => (
+                <TeamItem image={item.image} name={item.name} position={item.position} />
+            ))
+        }
+    </div>
+</div>

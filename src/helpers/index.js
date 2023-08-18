@@ -28,3 +28,22 @@ if (sidebarMenuItems.length > 0) {
         });
     });
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const accordions = document.querySelectorAll('.accordion');
+
+    if (accordions.length > 0) {
+        accordions.forEach((accordion) => {
+            const header = accordion.querySelector('.accordion__header');
+            header.addEventListener('click', () => {
+                if (!accordion.classList.contains('active')) {
+                    accordions.forEach((acc) => {
+                        acc.classList.remove('active');
+                    });
+                }
+
+                accordion.classList.toggle('active');
+            });
+        });
+    }
+});

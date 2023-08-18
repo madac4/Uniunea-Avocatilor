@@ -22,6 +22,11 @@
         margin-bottom: 20px;
     }
 
+    a {
+        text-decoration: underline;
+        color: $primarycolor;
+    }
+
     p {
         line-height: 150%;
         &:not(:last-child) {

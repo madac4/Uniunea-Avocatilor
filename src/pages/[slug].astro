@@ -2,6 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import Sidebar from '../components/General/Sidebar.astro';
 import Breadcrumbs from '../components/Blocks/Breadcrumbs.astro';
+import Team from '../components/Blocks/Team.astro';
+import FAQ from '../components/Blocks/FAQ.astro';
+import Navigation from '../components/Blocks/Navigation.astro';
 
 export async function getStaticPaths() {
     const allPages = await Astro.glob('../contents/*.md');
@@ -19,6 +22,7 @@ const { Content } = Astro.props.page;
 <Layout title={page.frontmatter.title} background={page.frontmatter.image}>
     <div class="page-content">
         <div class="page-content__container">
+            {page.frontmatter.navigation && <Navigation />}
             <div class="page-content__body grid page-grid">
                 <Sidebar />
 
@@ -27,7 +31,10 @@ const { Content } = Astro.props.page;
 
                     <h2>{page.frontmatter.title}</h2>
 
-                    <p><Content /></p>
+                    <Content />
+
+                    {page.frontmatter.team && <Team />}
+                    {page.frontmatter.faq && <FAQ />}
                 </div>
             </div>
         </div>

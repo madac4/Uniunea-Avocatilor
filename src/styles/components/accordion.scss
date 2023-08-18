@@ -1,0 +1,47 @@
+.accordion-container {
+    width: 100%;
+    @include adaptiv-value('margin-top', 30, 20, 1);
+    @include adaptiv-value('margin-bottom', 30, 20, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .accordion {
+        border-top: 2px solid $primarycolor;
+        box-shadow: 0px 2px 26px -13px rgba(0, 0, 0, 0.25);
+        @include adaptiv-value('padding', 20, 16, 1);
+        &.active {
+            gap: 20px;
+            .accordion__header {
+                margin-bottom: 20px;
+                &::after {
+                    transform: rotate(45deg);
+                }
+            }
+            .accordion__content {
+                max-height: 1000px;
+                transition: max-height 1s ease;
+            }
+        }
+        &__header {
+            position: relative;
+            cursor: pointer;
+            margin-bottom: 0;
+            transition: 0.3s;
+            &::after {
+                font-family: 'Material Design Icons';
+                content: '\F0417';
+                font-size: 24px;
+                color: $primarycolor;
+                transition: transform 0.3s;
+                position: absolute;
+                right: 0;
+            }
+        }
+        &__content {
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            max-height: 0;
+            padding: 0;
+        }
+    }
+}

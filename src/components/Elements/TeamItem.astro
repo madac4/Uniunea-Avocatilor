@@ -1,0 +1,11 @@
+---
+const { name, image, position } = Astro.props;
+---
+
+<div
+    class="team-body__item"
+    style={`background: linear-gradient(360deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.00) 100%), url('${image}') 50% 50% / cover no-repeat;`}
+>
+    <h6>{name}</h6>
+    <!-- <span>{position}</span> -->
+</div>

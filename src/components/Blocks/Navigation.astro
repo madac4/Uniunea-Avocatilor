@@ -1,0 +1,27 @@
+---
+import Button from '../Elements/NavButton.astro';
+const navItems = [
+    {
+        title: 'Consiliul Uniunii',
+        url: '/consiliul-uniunii-report',
+    },
+    {
+        title: 'Comisia de Licenţiere',
+        url: '/comisia-de-licentiere',
+    },
+    {
+        title: 'Comisia Etică şi Disciplină',
+        url: '/comisia-etica-si-disciplina',
+    },
+    {
+        title: 'Comisia de Cenzori',
+        url: '/comisia-de-cenzori',
+    },
+];
+---
+
+<nav class="page-navigation">
+    <div class="page-navigation__body">
+        {navItems.map((item) => <Button href={item.url}>{item.title}</Button>)}
+    </div>
+</nav>

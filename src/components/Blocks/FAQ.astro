@@ -1,0 +1,30 @@
+---
+import Accordion from '../Elements/Accordion.astro';
+
+const items = [
+    {
+        title: 'Baroul Teritorial Chişinău',
+        content:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sit perferendis officiis sapiente quam fugiat eos delectus quos rerum velit atque deserunt quibusdam ex labore incidunt in, maiores fugit mollitia!',
+    },
+    {
+        title: 'Baroul Teritorial Bălţi',
+        content:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sit perferendis officiis sapiente quam fugiat eos delectus quos rerum velit atque deserunt quibusdam ex labore incidunt in, maiores fugit mollitia!',
+    },
+    {
+        title: 'Baroul Teritorial Cahul',
+        content:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sit perferendis officiis sapiente quam fugiat eos delectus quos rerum velit atque deserunt quibusdam ex labore incidunt in, maiores fugit mollitia!',
+    },
+    {
+        title: 'Baroul Teritorial Comrat',
+        content:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sit perferendis officiis sapiente quam fugiat eos delectus quos rerum velit atque deserunt quibusdam ex labore incidunt in, maiores fugit mollitia!',
+    },
+];
+---
+
+<div class="accordion-container">
+    {items.map((item) => <Accordion title={item.title} content={item.content} />)}
+</div>
